@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Introdução ao Desenvolvimento Web</title>
+
+<meta name="description" content="Introdução ao Desenvolvimento Web">    
+
+  <meta name="author" content="Lucas Fialho Zawacki" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="revealjs/css/reveal.css">
+  <link rel="stylesheet" href="revealjs/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="revealjs/css/custom.css">
+
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="revealjs/css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+<h1>Introdução ao Desenvolvimento Web</h1>
+<h3>Lucas Fialho Zawacki</h3>
+<p>
+<h4></h4>
+</p>
+</section>  
+
+
+<section id="jabá-matehackers" class="level1">
+<h1>Jabá Matehackers</h1>
+
+<figure>
+<img src="assets/images/logo.png" />
+</figure>
+<section id="hackers-espaço-hackerspace" class="level2">
+<h2><strong>Hackers + Espaço = Hackerspace</strong></h2>
+<p><a href="http://matehackers.org">http://matehackers.org</a></p>
+</section>
+</section>
+<section id="what-is-web" class="level1">
+<h1>What is Web?</h1>
+<ul>
+<li>Uma nuvenzinha (não confundir com cloud computing)</li>
+</ul>
+
+<figure>
+<img src="assets/images/web.png" alt="Arquiterura da Web. Retirado de udacity.com" /><figcaption>Arquiterura da Web. Retirado de udacity.com</figcaption>
+</figure>
+</section>
+<section id="o-que-diferencia-um-app-desktop-de-um-app-web" class="level1">
+<h1>O que diferencia um app desktop de um app web?</h1>
+<ul>
+<li>Interação</li>
+<li>Tempo de resposta</li>
+<li>Acesso</li>
+</ul>
+</section>
+<section id="programadores-designers-e-administradores" class="level1">
+<h1>Programadores, designers e administradores</h1>
+<section id="desenvolvimento-web-é-o-termo-mais-genérico-de-todos" class="level2">
+<h2><strong>Desenvolvimento Web é o termo mais genérico de todos!</strong></h2>
+</section>
+</section>
+<section id="programadores-designers-e-administradores-1" class="level1">
+<h1>Programadores, designers e administradores</h1>
+<section id="operações" class="level2">
+<h2>Operações?</h2>
+<p><strong>Servidores</strong>: apache, nginx, lighttpd, mongrel, ...</p>
+<p><strong>Bancos-de-dados</strong>: mysql, postgresql, oracle, ...</p>
+<p><strong>Versionamento e Deployment</strong>: git, ftp, capistrano, ...</p>
+<p><strong>Monitoramento</strong>: daemons, cronjobs, monit, nagios, ...</p>
+</section>
+</section>
+<section id="programadores-designers-e-administradores-2" class="level1">
+<h1>Programadores, designers e administradores</h1>
+<section id="aplicação" class="level2">
+<h2>Aplicação?</h2>
+<p><strong>Linguagens</strong>: PHP, Ruby, Python, ASP, ...</p>
+<p><strong>Tecnologia</strong>: Web services, autenticação, criptografia, algoritmos ...</p>
+</section>
+</section>
+<section id="programadores-designers-e-administradores-3" class="level1">
+<h1>Programadores, designers e administradores</h1>
+<section id="interação-e-design" class="level2">
+<h2>Interação e Design?</h2>
+<p><strong>Estrutura</strong>: HTML, CSS, Javascript, ...</p>
+<p><strong>Visual</strong>: Imagens, Cores, disposição de elementos</p>
+</section>
+</section>
+<section id="frontend-e-backend" class="level1">
+<h1>Frontend e Backend</h1>
+<section id="o-que-é-um-e-o-que-é-outro" class="level2">
+<h2>O que é um e o que é outro?</h2>
+</section>
+</section>
+<section id="backend-o-que-é-um-servidor-web" class="level1">
+<h1>Backend: O que é um servidor Web?</h1>
+<section id="um-software..." class="level4">
+<h4>Um software...</h4>
+<p>Que recebe requisições de diversos <strong>clientes</strong> e <strong>serve</strong> conteúdo para estes. Geralmente multithreaded, preparado para servir diversos arquivos estáticos e com suporte &quot;interno&quot; a linguagens.</p>
+</section>
+<section id="um-computador..." class="level4">
+<h4>Um computador...</h4>
+<p>Parrudo onde roda um software servidor.</p>
+</section>
+</section>
+<section id="http" class="level1">
+<h1>HTTP</h1>
+<section id="http-é-a-web" class="level4">
+<h4>HTTP É a Web</h4>
+<p>Protocolo usado para comunicar os clientes com os servidores</p>
+<p>Uso de verbos e recursos</p>
+<p>Verbos mais usados são GET e POST</p>
+</section>
+</section>
+<section id="http-1" class="level1">
+<h1>HTTP</h1>
+<section id="exemplo" class="level4">
+<h4>Exemplo</h4>
+<pre><code>GET          /foo           HTTP/1.1
+Verbo        Recurso        Versão
+Method       Path</code></pre>
+</section>
+</section>
+<section id="http-2" class="level1">
+<h1>HTTP</h1>
+<section id="exemplo-1" class="level4">
+<h4>Exemplo</h4>
+<pre><code>POST     /foo?name=bar      HTTP/1.1
+Verbo    Recurso            Versão
+Method   Path</code></pre>
+</section>
+</section>
+<section id="get-x-post" class="level1">
+<h1>GET x POST</h1>
+<ul>
+<li>GET == ler</li>
+<li>POST == modificar</li>
+</ul>
+</section>
+<section id="respostas-http" class="level1">
+<h1>Respostas HTTP</h1>
+<ul>
+<li>O servidor te envia: a versão de HTTP usada, um código de erro e um documento</li>
+<li>O documento <strong>geralmente</strong> será um arquivo HTML, mas o cliente pode interpretar de várias maneiras ...</li>
+</ul>
+</section>
+<section id="respostas-http-1" class="level1">
+<h1>Respostas HTTP</h1>
+<section id="status-comuns" class="level2">
+<h2>Status comuns</h2>
+<p><strong>200</strong>: Ok</p>
+<p><strong>302</strong>: Found</p>
+<p><strong>404</strong>: Not Found</p>
+<p><strong>500</strong>: Server error</p>
+</section>
+</section>
+<section id="respostas-http-2" class="level1">
+<h1>Respostas HTTP</h1>
+
+<figure>
+<img src="assets/images/http.jpg" alt="Códigos de Erro HTTP" /><figcaption>Códigos de Erro HTTP</figcaption>
+</figure>
+</section>
+<section id="headers-http" class="level1">
+<h1>Headers HTTP</h1>
+<ul>
+<li>Além das informações citadas acima informações, cada mensagem HTTP leva junto 'headers'</li>
+<li>Headers são apenas linhas de texto num formato 'chave: valor'</li>
+<li>Alguns são muito úteis como o <code>Content-Type</code></li>
+</ul>
+</section>
+<section id="headers-http-1" class="level1">
+<h1>Headers HTTP</h1>
+<section id="uma-visita-a-httpmatehackers.org" class="level4">
+<h4>Uma visita a http://matehackers.org</h4>
+<pre><code>Conectando-se a matehackers.org na porta 80
+GET / HTTP/1.1
+User-Agent: curl/7.22.0 (i686-pc-linux-gnu) libcurl/7.22.0 OpenSSL/1.0.1 zlib/1.2.3.4 libidn/1.23 librtmp/2.3
+Host: matehackers.org
+Accept: */*</code></pre>
+</section>
+</section>
+<section id="headers-http-2" class="level1">
+<h1>Headers HTTP</h1>
+<section id="resposta-de-httpmatehackers.org" class="level4">
+<h4>Resposta de http://matehackers.org</h4>
+<pre><code>HTTP/1.1 302 Found
+Date: Fri, 23 Nov 2012 02:34:07 GMT
+Server: Apache
+X-Powered-By: PHP/5.4.8
+Location: doku.php
+Content-Length: 0
+Content-Type: text/html</code></pre>
+</section>
+</section>
+<section id="conteúdo-estático-e-dinâmico" class="level1">
+<h1>Conteúdo Estático e Dinâmico</h1>
+<ul>
+<li>Servidores podem enviar arquivos já prontos</li>
+<li><p>HTML, vídeos, músicas, ...</p></li>
+<li>Ou construí-los dinamicamente</li>
+<li><p>Perfis Facebook e Twitter, RSS, ...</p></li>
+</ul>
+</section>
+<section id="conteúdo-dinâmico" class="level1">
+<h1>Conteúdo Dinâmico</h1>
+<ul>
+<li>Abordagem como aplicativos tradicionais</li>
+<li>As entradas são as mensagens HTTP</li>
+<li>As saídas são arquivos baixados pelo cliente</li>
+</ul>
+</section>
+<section id="tríplice-frontend" class="level1">
+<h1>Tríplice Frontend</h1>
+<section id="frontend-é-a-interface" class="level2">
+<h2>Frontend é a interface</h2>
+<p>HTML é a Estrutura</p>
+<p>CSS é a Aparência</p>
+<p>JS é o Comportamento</p>
+</section>
+</section>
+<section id="html" class="level1">
+<h1>HTML</h1>
+<section id="httpwww.udacity.comhtml_playground" class="level2">
+<h2><a href="http://www.udacity.com/html_playground">http://www.udacity.com/html_playground</a></h2>
+<p>Testem enquanto o curso rola</p>
+</section>
+</section>
+<section id="html-1" class="level1">
+<h1>HTML</h1>
+<ul>
+<li>HTML define <strong>conteúdo</strong> e <strong>estrutura</strong>.</li>
+<li>Não é uma linguagem de programação.</li>
+<li>É uma linguagem de marcação (markup).</li>
+</ul>
+</section>
+<section id="html-2" class="level1">
+<h1>HTML</h1>
+<ul>
+<li>Escreva HTML antes -&gt; pense na estrutura dos dados.</li>
+<li>Só depois comece a pensar na apresentação.</li>
+</ul>
+<p>Ex.: headers, use <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, ..., sem se preocupar com o tamanho da fonte, mas sim com seu significado (seções e subseções).</p>
+<ul>
+<li>A aparência pode ser mudada depois com CSS.</li>
+</ul>
+</section>
+<section id="html-3" class="level1">
+<h1>HTML</h1>
+<p>Qual a diferença entre <code>&lt;em&gt;</code> e <code>&lt;i&gt;</code>? <code>&lt;strong&gt;</code> e <code>&lt;b&gt;</code>?</p>
+</section>
+<section id="html-4" class="level1">
+<h1>HTML</h1>
+<p>Qual a diferença entre <code>&lt;em&gt;</code> e <code>&lt;i&gt;</code>? <code>&lt;strong&gt;</code> e <code>&lt;b&gt;</code>?</p>
+<p><code>&lt;em&gt;</code> e <code>&lt;strong&gt;</code> agregam um significado, e screen readers podem utilizar para dar entonação a leitura.</p>
+</section>
+<section id="html-5" class="level1">
+<h1>HTML</h1>
+<section id="httphtmldog.com" class="level2">
+<h2><a href="http://htmldog.com">http://htmldog.com</a></h2>
+<p>Bom material para aprender do zero a 99%</p>
+</section>
+</section>
+<section id="html-6" class="level1">
+<h1>HTML</h1>
+<section id="html-bem-escrito-significa" class="level2">
+<h2>HTML bem escrito significa:</h2>
+<p>Acessibilidade (Screen Readers)</p>
+<p>Portabilidade</p>
+<p>Fácil manutenção (Fácil de entender e alterar)</p>
+<p>Menor latência (cache de arquivos css e js)</p>
+</section>
+</section>
+<section id="css" class="level1">
+<h1>CSS</h1>
+<section id="forma-e-aparência" class="level2">
+<h2>Forma e Aparência</h2>
+<p>Melhor UX (look and feel)</p>
+</section>
+</section>
+<section id="css-1" class="level1">
+<h1>CSS</h1>
+<section id="separe-do-html-movendo-para-um-arquivo-separado" class="level2">
+<h2>Separe do HTML movendo para um arquivo separado</h2>
+<p>Melhor organizado</p>
+<p>Facil manutenção</p>
+<p>Permite browser fazer cache</p>
+</section>
+</section>
+<section id="css-anatomia" class="level1">
+<h1>CSS Anatomia</h1>
+<section id="seletores-propriedades-e-valores" class="level2">
+<h2>Seletores, Propriedades e Valores</h2>
+<p><code>p { color: blue; }</code></p>
+</section>
+</section>
+<section id="css-seletores" class="level1">
+<h1>CSS Seletores</h1>
+<ol type="1">
+<li>elemento: p</li>
+<li>classe: .class</li>
+<li>id: #id</li>
+<li>posição: #about p, p#intro (com espaço ou sem espaço)</li>
+<li>pseudo classes: a:visited</li>
+</ol>
+</section>
+<section id="css-valores" class="level1">
+<h1>CSS Valores</h1>
+<p>Absolutos: px</p>
+<p>Relativos: %: relativo ao contexto, em: relativo ao valor atual de font-size</p>
+</section>
+<section id="css-herança" class="level1">
+<h1>CSS Herança</h1>
+<p>Aqui as coisas começam a complicar</p>
+<blockquote>
+<p>Propriedades relacionadas a textos herdam (color, font, ...), propriedades relacionadas a layout não herdam (border, background, ...).</p>
+</blockquote>
+
+<figure>
+<img src="assets/images/inheritance.jpg" alt="Herança em CSS" /><figcaption>Herança em CSS</figcaption>
+</figure>
+</section>
+<section id="javascript-js" class="level1">
+<h1>JavaScript (JS)</h1>
+<section id="torna-seu-aplicativo-interativo" class="level2">
+<h2>Torna seu aplicativo interativo</h2>
+<p>Validações (no cliente)</p>
+<p>Drag and drop</p>
+<p>Menus</p>
+</section>
+</section>
+<section id="js" class="level1">
+<h1>JS</h1>
+<section id="javascript-não-é-java" class="level2">
+<h2>JavaScript não é Java</h2>
+<p>É uma linguagem de programação dinâmica e fracamente tipada.</p>
+</section>
+</section>
+<section id="js-como-interagir-com-a-página" class="level1">
+<h1>JS: Como interagir com a página?</h1>
+<section id="dom-documento-object-model" class="level2">
+<h2>DOM (Documento Object Model)</h2>
+<p>Uma arvore de objetos que reflete a estrutura do html.</p>
+<p>Objetos possuem propriedades e métodos que permitem alterar o html.</p>
+</section>
+</section>
+<section id="js-como-interagir-com-a-página-1" class="level1">
+<h1>JS: Como interagir com a página?</h1>
+<section id="exemplos" class="level2">
+<h2>Exemplos</h2>
+<p>document.getElementById('about');</p>
+<p>document.getElementByTagName('p');</p>
+</section>
+</section>
+<section id="jquery" class="level1">
+<h1>JQuery</h1>
+<section id="biblioteca-javascript-para-facilitar" class="level2">
+<h2>Biblioteca JavaScript para facilitar:</h2>
+<p>Percorrer DOM</p>
+<p>Lidar com eventos</p>
+<p>Animações</p>
+<p>Ajax</p>
+</section>
+</section>
+<section id="jquery-1" class="level1">
+<h1>JQuery</h1>
+<p><a href="https://www.codeschool.com/courses/try-jquery">https://www.codeschool.com/courses/try-jquery</a></p>
+</section>
+<section id="o-caminho-de-uma-requisição-web" class="level1">
+<h1>O caminho de uma requisição Web</h1>
+<section id="o-que-acontece-quando-acessamos-httpmeusite.comsegredonomelucas-usando-nosso-browser" class="level4">
+<h4>O que acontece quando acessamos <a href="http://meusite.com/segredo?nome=lucas">http://meusite.com/segredo?nome=lucas</a> usando nosso browser?</h4>
+</section>
+</section>
+<section id="o-caminho-de-uma-requisição-web-1" class="level1">
+<h1>O caminho de uma requisição Web</h1>
+<section id="a-request-http-é-essa" class="level2">
+<h2>A request HTTP é essa:</h2>
+<pre><code>Conectando-se a meusite.com
+GET  /segredo?nome=lucas HTTP/1.1</code></pre>
+</section>
+</section>
+<section id="o-caminho-de-uma-requisição-web-2" class="level1">
+<h1>O caminho de uma requisição Web</h1>
+<ul>
+<li>Mensagem é recebida pelo servidor</li>
+<li>Servidor extrai o significado de /segredo?nome=lucas</li>
+<li>Servidor gera um documento em resposta</li>
+</ul>
+</section>
+<section id="o-caminho-de-uma-requisição-web-3" class="level1">
+<h1>O caminho de uma requisição Web</h1>
+<section id="estático" class="level3">
+<h3>Estático</h3>
+<p>Retorna um arquivo pré-pronto (talvez segredo.html)</p>
+</section>
+<section id="dinâmico" class="level3">
+<h3>Dinâmico</h3>
+<p>Retorna uma página gerada dinamicamente baseado no &quot;parâmetro&quot; <code>segredo?nome=lucas</code>. Pode rodar um programa ou script, consultar bancos-de-dados e/ou alguns serviços externos, etc...</p>
+</section>
+</section>
+<section id="node.js" class="level1">
+<h1>Node.js</h1>
+<ul>
+<li>Ainda é a mesma linguagem de script, só que rodando num servidor</li>
+<li>Engine V8 do Chrome</li>
+<li>Programação assíncrona</li>
+<li><a href="https://nodejs.org/en/about/">https://nodejs.org/en/about/</a></li>
+<li><a href="https://nodeschool.io/pt-br/#workshopper-list">https://nodeschool.io/pt-br/#workshopper-list</a></li>
+</ul>
+</section>
+<section id="protótipo" class="level1">
+<h1>Protótipo</h1>
+<p>...</p>
+</section>
+<section id="próximos-passos" class="level1">
+<h1>Próximos Passos</h1>
+<ul>
+<li>npm modules</li>
+<li>express</li>
+<li>ORM, bancos-de-dados</li>
+<li>Testes</li>
+<li>Deployment</li>
+</ul>
+</section>
+<section id="perguntas" class="level1">
+<h1>Perguntas</h1>
+<section id="section" class="level2">
+<h2><strong>?????</strong></h2>
+</section>
+</section>
+<section id="obrigado" class="level1">
+<h1>Obrigado!</h1>
+
+<figure>
+<img src="assets/images/logo.png" />
+</figure>
+<section id="hackers-espaço-hackerspace-1" class="level2">
+<h2><strong>Hackers + Espaço = Hackerspace</strong></h2>
+<p>http://matehackers.org</p>
+</section>
+</section>
+</div>
+
+<script src="revealjs/lib/js/head.min.js"></script>
+<script src="revealjs/js/reveal.js"></script>
+
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: false,
+
+  // available themes are in /css/theme
+      theme: Reveal.getQueryHash().theme || 'sky', 
+  
+  // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'linear',
+  
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'revealjs/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+users:
+-
+    name: Lucas
+    description: Oi eu sou o Lucas
+    picture: https://matehackers.org/_media/lucas.jpg
+-
+    name: Joel
+    description: Sou o Joel
+    picture: https://matehackers.org/_media/joel_pic.jpeg
+-
+    name: Relsi
+    description: ...
+    picture: https://matehackers.org/_media/relsi_upload.jpeg

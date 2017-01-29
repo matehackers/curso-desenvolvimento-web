@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Minha rede</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+  </head>
+
+  <body>
+
+<div class="card"></div>
+    <nav class="navbar navbar-default custom-header">
+        <div class="container-fluid">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Minha rede</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li role="presentation"><a href="/">Principal </a></li>
+                    <li role="presentation"><a href="/user/lucas">Lucas </a></li>
+                    <li role="presentation"><a href="/user/joel">Joel</a></li>
+                    <li role="presentation"><a href="/user/relsi" class="custom-navbar">Relsi<span class="badge">new</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img src="/static/img/lucas.jpg" class="dropdown-image"></a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#">Settings </a></li>
+                            <li><a href="#">Payments </a></li>
+                            <li class="active"><a href="#">Logout </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{{content}}}
+
+    <footer>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footer-navigation">
+                <h3><a href="#">Minhas rede</a></h3>
+                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                <p class="company-name">Minha rede © 2017 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">21 Hacker Street</span> Mate City, Mateland</p>
+                </div>
+                <div><span class="fa fa-phone footer-contacts-icon"></span>
+                    <p class="footer-center-info email text-left"> +55 51 314159253</p>
+                </div>
+                <div><span class="fa fa-envelope footer-contacts-icon"></span>
+                    <p> <a href="#" target="_blank">support@matehakers.org</a></p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 footer-about">
+                <h4>About the company</h4>
+                <p> Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.</p>
+                <div class="social-links social-icons"><a href="#"><span class="fa fa-facebook"></span></a><a href="#"><span class="fa fa-twitter"></span></a><a href="#"><span class="fa fa-linkedin"></span></a><a href="#"><span class="fa fa-github"></span></a></div>
+            </div>
+        </div>
+
+  </body>
+</html>

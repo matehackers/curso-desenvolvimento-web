@@ -1,0 +1,19 @@
+users:
+
+  lucas:
+    name: Lucas Fialho Zawacki
+    description: Oi eu sou o Lucas
+    picture: /static/img/lucas.jpg
+    address: Aqui
+
+  joel:
+    name: Joel Grigolo
+    description: Sou o Joel
+    picture: /static/img/joel_pic.jpeg
+    address: Ali
+
+  relsi:
+    name: Relsi Maron
+    description: ...
+    picture: /static/img/relsi_upload.jpeg
+    address: Lá

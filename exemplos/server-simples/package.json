@@ -1,0 +1,17 @@
+{
+  "name": "server-simples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "mustache": "^2.3.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Lucas Fialho Zawacki",
+  "license": "PDDL-1.0"
+}
